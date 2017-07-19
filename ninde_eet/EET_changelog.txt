@@ -1,0 +1,9 @@
+V 3.0
+---------
+
+- Branched off from EE v2
+- tp2 corrections
+- EET conversion
+- corrected script errors
+- dialogue adjustments
+- Weidu version update
