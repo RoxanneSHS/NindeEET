@@ -47,7 +47,6 @@ COMPILE ~ninde_eet/dialogue/blk#nind.d~
 COMPILE ~ninde_eet/dialogue/lk#nindp.d~
 COMPILE ~ninde_eet/dialogue/quest.d~
 
-COMPILE ~ninde_eet/dialogue/lk#ni25.d~
 COMPILE ~ninde_eet/dialogue/lk#ni25j.d~
 COMPILE ~ninde_eet/dialogue/blk#ni25.d~
 COMPILE ~ninde_eet/dialogue/lk#ni25p.d~
@@ -71,6 +70,7 @@ COMPILE ~ninde_eet/scripts/lk#niwr1.baf~
 EXTEND_BOTTOM ~ar0801.bcs~   ~ninde_eet/scripts/ar0801.baf~
 EXTEND_BOTTOM ~ar0809.bcs~   ~ninde_eet/scripts/ar0809.baf~
 EXTEND_BOTTOM ~ar2812.bcs~   ~ninde_eet/scripts/ar2812.baf~
+EXTEND_BOTTOM ~ar4000.bcs~   ~ninde_eet/scripts/ar4000.baf~
 EXTEND_BOTTOM ~bodhiamb.bcs~ ~ninde_eet/scripts/bodhiamb.baf~
 EXTEND_BOTTOM ~haerda.bcs~   ~ninde_eet/scripts/haerda.baf~
 EXTEND_BOTTOM ~nalia.bcs~    ~ninde_eet/scripts/nalia.baf~

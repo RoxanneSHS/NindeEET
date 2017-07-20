@@ -1,0 +1,9 @@
+IF
+InPartyAllowDead("Ninde")
+Global("NindeExistsToBJoin","ar4000",0)
+THEN
+  RESPONSE #100
+    SetGlobal("NindeExistsToBJoin","ar4000",1)
+ActionOverride("Ninde",ChangeAIScript("LK#Ni25",OVERRIDE))
+Continue()
+END
