@@ -3191,3 +3191,13 @@ IF ~~ LK#NindeFlirt_kisshand10
   IF ~~ EXIT
 END
 END
+
+EXTEND_TOP FATESP 6
+ 
+IF ~!Dead("ninde") !InMyArea("ninde")
+	Global("NindeSummoned","GLOBAL",0)~ THEN REPLY~ Bring me Lady Ninde Amblecrown.~ DO ~CreateVisualEffect("SPPORTAL",[1999.1228])
+	Wait(2)
+	MoveGlobal("AR4500","ninde",[1999.1228])
+	SetGlobal("NindeSummoned","GLOBAL",1)
+~ GOTO 8
+END
