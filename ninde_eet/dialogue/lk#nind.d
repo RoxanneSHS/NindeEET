@@ -99,6 +99,15 @@ END
 
 APPEND ~LK#NIND~
 // Joining dialogue two
+
+IF WEIGHT #-1~Global("LK#NindeSpawnCrooked","GLOBAL",2) ~ LK#NJ2_introcrane
+  SAY @38 /* Oh, it's you again.  I see you're walking and talking, so congratulations, you've exceeded my expectations.  Have you come about our little...business proposal? */
+  ++ @39 /* Indeed I have.  We could use your skills, if you're still interested. */ + LK#NJ2_joinplz
+  ++ @40 /* Ha, nope.  I just came to watch a fine lady such as you marinating in this hole.  Amusing to say the least. */ + LK#NJ2_nopes
+  ++ @41 /* No, we just happened to be nearby.  It's good to see you again, Ninde. */ + LK#NJ2_niceno
+  ++ @42 /* Actually, I've decided to kill you. */ + LK#NJ2_violence
+END
+
 IF ~Global("LK#NindeJoined","LOCALS",0)~ LK#NJ2_intro
   SAY @38 /* Oh, it's you again.  I see you're walking and talking, so congratulations, you've exceeded my expectations.  Have you come about our little...business proposal? */
   ++ @39 /* Indeed I have.  We could use your skills, if you're still interested. */ + LK#NJ2_joinplz
