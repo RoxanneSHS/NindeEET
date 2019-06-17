@@ -377,7 +377,7 @@ IF ~~ LK#NL4_end2
 END
 
 // 5.  The past, present and future
-IF ~Global("LK#NindeLoveTalks","GLOBAL",9) InParty("Imoen")~ LK#NL5_intro
+IF ~Global("LK#NindeLoveTalks","GLOBAL",9) InParty("Imoen2")~ LK#NL5_intro
   SAY @139 /* You have your sister back.  I have heard you both hinting at the exceptionally close relationship you shared as children.  Ahh, the tomfoolery of youth.  I'll warrant back among the echoey turrets and cloistered monks of your adolescence, neither of you supposed you'd one day be spiritually barren 'adventurers' trotting around Amn, subject to the whims of beings superior to yourselves, desperately attempting to maintain a semblance of the reality you once knew.  Pity. */
   ++ @140 /* Perhaps things did not transpire quite as I imagined they would, but I always knew adventuring was the right path.  I would never have been content being a farmer or a barrel-maker or something. */ DO ~RealSetGlobalTimer("LK#NindeLoveTalksTimer","GLOBAL",1800) IncrementGlobal("LK#NindeLoveTalks","GLOBAL",1)~ + LK#NL5_alwaysadvent
   ++ @141 /* Danger, adventure, magic, blood!  It is the only reality there is!  I am leading the life I had always dreamed I would! */ DO ~RealSetGlobalTimer("LK#NindeLoveTalksTimer","GLOBAL",1800) IncrementGlobal("LK#NindeLoveTalks","GLOBAL",1)~ + LK#NL5_dangerventure
@@ -385,7 +385,7 @@ IF ~Global("LK#NindeLoveTalks","GLOBAL",9) InParty("Imoen")~ LK#NL5_intro
   ++ @143 /* Frankly, Ninde, you abusive hag, I don't want to talk to you at all. */ DO ~SetGlobal("LK#NindeRomanceActive","GLOBAL",3)~ EXIT
 END
 
-IF ~Global("LK#NindeLoveTalks","GLOBAL",9) !InParty("Imoen")~ LK#NL5_introB
+IF ~Global("LK#NindeLoveTalks","GLOBAL",9) !InParty("Imoen2")~ LK#NL5_introB
   SAY @144 /* You have rescued your sister.  I have heard you hinting at the exceptionally close relationship you shared as children, though it may have waned now.  Ahh, the tomfoolery of youth.  I'll warrant back among the echoey turrets and cloistered monks of your adolescence, neither of you supposed you'd one day be spiritually barren 'adventurers' trotting around Amn, subject to the whims of beings superior to yourselves, desperately attempting to maintain a semblance of the reality you once knew.  Pity. */
   ++ @140 /* Perhaps things did not transpire quite as I imagined they would, but I always knew adventuring was the right path.  I would never have been content being a farmer or a barrel-maker or something. */ DO ~RealSetGlobalTimer("LK#NindeLoveTalksTimer","GLOBAL",1800) IncrementGlobal("LK#NindeLoveTalks","GLOBAL",1)~ + LK#NL5_alwaysadvent
   ++ @141 /* Danger, adventure, magic, blood!  It is the only reality there is!  I am leading the life I had always dreamed I would! */ DO ~RealSetGlobalTimer("LK#NindeLoveTalksTimer","GLOBAL",1800) IncrementGlobal("LK#NindeLoveTalks","GLOBAL",1)~ + LK#NL5_dangerventure
