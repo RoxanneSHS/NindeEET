@@ -9,3 +9,4 @@ V 3.0
 - EET ToB transition
 - Weidu version update
 - LoB flags added
+- tra corrections

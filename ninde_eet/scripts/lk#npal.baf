@@ -153,37 +153,6 @@ THEN
 END
 
 IF
-  HPPercentLT(Myself,25)
-  HPGT(Myself,1)
-  !StateCheck(Myself,STATE_REALLY_DEAD)
-  Global("Whined","LOCALS",0)
-  See(NearestMyGroupOfType)
-  Allegiance(Myself,ENEMY)
-  !StateCheck(LastSeenBy(Myself),STATE_REALLY_DEAD)
-THEN
-  RESPONSE #100
-    SetGlobal("Whined","LOCALS",1)
-    Shout(HELP_ME_GROUP153)
-    DisplayStringHead(Myself,46151) // 'help!'
-END
-
-
-// Attack stuff
-IF
-  Heard([ANYONE],HELP_ME_GROUP153)
-THEN
-  RESPONSE #100
-    RunAwayFrom(NearestEnemyOf(Myself),45)
-END
-
-IF
-  Heard([ANYONE],FLEE_FROM_MAGE)
-THEN
-  RESPONSE #100
-    AttackReevaluate([PC.0.0.MAGE],45)
-END
-
-IF
   See(NearestEnemyOf(Myself))
   !Range(NearestEnemyOf(Myself),7)
 THEN

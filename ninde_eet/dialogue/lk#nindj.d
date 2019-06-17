@@ -5495,7 +5495,6 @@ END
 END
 
 
-// Aran interjection, chapter 3
 EXTEND_BOTTOM ARAN 27
   IF ~InParty("Ninde") !Dead("Ninde")~ EXTERN ARAN LK#NinAran
 END
@@ -5597,9 +5596,7 @@ ActionOverride("Aran",SetGlobal("spokeTrip","LOCALS",1))~ + 31
 END
 
 END
-
-
-// Elhan interjection, chapter 6
+ 
 EXTEND_BOTTOM C6ELHAN2 53
   IF ~InParty("Ninde") !Dead("Ninde")~ EXTERN C6WARSA1 LK#NinElhan
 END
@@ -5903,13 +5900,13 @@ IF ~~ LK#NindeChat
   + ~RandomNum(2,2)~ + @1672 /* Ninde, what do you look for in a man? */ + LK#NindeChat_lookfor2
   + ~OR(6) AreaCheck("AR1500") AreaCheck("AR1512") AreaCheck("AR1513") AreaCheck("AR1514") AreaCheck("AR1515") AreaCheck("AR1516")~ + @1673 /* Have you any advice for me, Ninde? */ + LK#NindeChat_advicespellhold
   + ~OR(2) AreaCheck("AR2100") AreaCheck("AR2200")~ + @1673 /* Have you any advice for me, Ninde? */ + LK#NindeChat_adviceunderdark
-  + ~RandomNum(4,1) GlobalGT("Chapter","GLOBAL",17)~ + @1673 /* Have you any advice for me, Ninde? */ + LK#NindeChat_advicech6
-  + ~RandomNum(4,2) GlobalGT("Chapter","GLOBAL",17) !AreaCheck("AR2100") !AreaCheck("AR2200") !AreaCheck("AR1500") !AreaCheck("AR1512") !AreaCheck("AR1513") !AreaCheck("AR1514") !AreaCheck("AR1515") !AreaCheck("AR1516")~ + @1673 /* Have you any advice for me, Ninde? */ + LK#NindeChat_advice1
-  + ~RandomNum(4,3) GlobalGT("Chapter","GLOBAL",17) !AreaCheck("AR2100") !AreaCheck("AR2200") !AreaCheck("AR1500")  !AreaCheck("AR1512") !AreaCheck("AR1513") !AreaCheck("AR1514") !AreaCheck("AR1515") !AreaCheck("AR1516")~ + @1673 /* Have you any advice for me, Ninde? */ + LK#NindeChat_advice2
-  + ~RandomNum(4,4) GlobalGT("Chapter","GLOBAL",17) !AreaCheck("AR2100") !AreaCheck("AR2200") !AreaCheck("AR1500")  !AreaCheck("AR1512") !AreaCheck("AR1513") !AreaCheck("AR1514") !AreaCheck("AR1515") !AreaCheck("AR1516")~ + @1673 /* Have you any advice for me, Ninde? */ + LK#NindeChat_advice3
-  + ~RandomNum(3,1) !GlobalGT("Chapter","GLOBAL",17) !AreaCheck("AR2100") !AreaCheck("AR2200") !AreaCheck("AR1500") !AreaCheck("AR1512") !AreaCheck("AR1513") !AreaCheck("AR1514") !AreaCheck("AR1515") !AreaCheck("AR1516")~ + @1673 /* Have you any advice for me, Ninde? */ + LK#NindeChat_advice1
-  + ~RandomNum(3,2) !GlobalGT("Chapter","GLOBAL",17) !AreaCheck("AR2100") !AreaCheck("AR2200") !AreaCheck("AR1500")  !AreaCheck("AR1512") !AreaCheck("AR1513") !AreaCheck("AR1514") !AreaCheck("AR1515") !AreaCheck("AR1516")~ + @1673 /* Have you any advice for me, Ninde? */ + LK#NindeChat_advice2
-  + ~RandomNum(3,3) !GlobalGT("Chapter","GLOBAL",17) !AreaCheck("AR2100") !AreaCheck("AR2200") !AreaCheck("AR1500")  !AreaCheck("AR1512") !AreaCheck("AR1513") !AreaCheck("AR1514") !AreaCheck("AR1515") !AreaCheck("AR1516")~ + @1673 /* Have you any advice for me, Ninde? */ + LK#NindeChat_advice3
+  + ~RandomNum(4,1) GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%)~ + @1673 /* Have you any advice for me, Ninde? */ + LK#NindeChat_advicech6
+  + ~RandomNum(4,2) GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%) !AreaCheck("AR2100") !AreaCheck("AR2200") !AreaCheck("AR1500") !AreaCheck("AR1512") !AreaCheck("AR1513") !AreaCheck("AR1514") !AreaCheck("AR1515") !AreaCheck("AR1516")~ + @1673 /* Have you any advice for me, Ninde? */ + LK#NindeChat_advice1
+  + ~RandomNum(4,3) GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%) !AreaCheck("AR2100") !AreaCheck("AR2200") !AreaCheck("AR1500")  !AreaCheck("AR1512") !AreaCheck("AR1513") !AreaCheck("AR1514") !AreaCheck("AR1515") !AreaCheck("AR1516")~ + @1673 /* Have you any advice for me, Ninde? */ + LK#NindeChat_advice2
+  + ~RandomNum(4,4) GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%) !AreaCheck("AR2100") !AreaCheck("AR2200") !AreaCheck("AR1500")  !AreaCheck("AR1512") !AreaCheck("AR1513") !AreaCheck("AR1514") !AreaCheck("AR1515") !AreaCheck("AR1516")~ + @1673 /* Have you any advice for me, Ninde? */ + LK#NindeChat_advice3
+  + ~RandomNum(3,1) !GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%) !AreaCheck("AR2100") !AreaCheck("AR2200") !AreaCheck("AR1500") !AreaCheck("AR1512") !AreaCheck("AR1513") !AreaCheck("AR1514") !AreaCheck("AR1515") !AreaCheck("AR1516")~ + @1673 /* Have you any advice for me, Ninde? */ + LK#NindeChat_advice1
+  + ~RandomNum(3,2) !GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%) !AreaCheck("AR2100") !AreaCheck("AR2200") !AreaCheck("AR1500")  !AreaCheck("AR1512") !AreaCheck("AR1513") !AreaCheck("AR1514") !AreaCheck("AR1515") !AreaCheck("AR1516")~ + @1673 /* Have you any advice for me, Ninde? */ + LK#NindeChat_advice2
+  + ~RandomNum(3,3) !GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%) !AreaCheck("AR2100") !AreaCheck("AR2200") !AreaCheck("AR1500")  !AreaCheck("AR1512") !AreaCheck("AR1513") !AreaCheck("AR1514") !AreaCheck("AR1515") !AreaCheck("AR1516")~ + @1673 /* Have you any advice for me, Ninde? */ + LK#NindeChat_advice3
   ++ @1674 /* What were you like as a child? */ + LK#NindeChat_child
   ++ @1675 /* Do you have a favourite word, Ninde? */ + LK#NindeChat_word
   ++ @1676 /* What, in your opinion, is the best thing to be discovered by men and gods? */ + LK#NindeChat_best

@@ -1,60 +1,44 @@
-// --------------------------------------------
-// Mod setup
-// --------------------------------------------
-// Basics
 BACKUP ~ninde_eet/backup~
 //AUTHOR ~K'aeloree (kae@spellholdstudios.net)~ 
 SUPPORT ~Roxanne - https://baldursextendedworld.com/Branched-EET-Updates-2/ or roxanne@baldursextendedworld.com~
 
 VERSION ~V 3.0~
 
-
-// --------------------------------------------
-// Ninde NPC Mod v.03
-// --------------------------------------------
-// Component setup
 AUTO_TRA ~ninde_eet/translations/%s~
+
+ALWAYS
+  ACTION_IF (GAME_IS ~eet~) BEGIN
+    OUTER_SET bg2_chapter = 12
+  END ELSE BEGIN
+    OUTER_SET bg2_chapter = 0
+  END
+  OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
+    OUTER_SET bg2_chapter = bg2_chapter + 1
+    OUTER_SPRINT name_source ~bg2_chapter_%i%~
+    OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+  END
+END
+
 LANGUAGE ~English~
          ~English~
          ~ninde_eet/translations/english/setup.tra~
 
-BEGIN ~Ninde NPC Mod for EET~ 
-REQUIRE_PREDICATE GAME_IS ~eet~ @0 
-// Adds custom IsValidForPartyDialogue state used throughout ninde
-APPEND ~STATE.IDS~ // adds custom IsValidForPartyDialogue state
-  ~0x80101FEF CD_STATE_NOTVALID~
-  UNLESS ~CD_STATE_NOTVALID~
-
-// Fixing Imoen's dialogue file
-ACTION_IF FILE_EXISTS_IN_GAME ~mel01.cre~ THEN BEGIN
-  COPY_EXISTING ~interdia.2da~ ~override~
-    SET_2DA_ENTRY 17 1 2 ~BIMOEN2~ // fixes ToB version
-    BUT_ONLY_IF_IT_CHANGES
-END ELSE BEGIN
-  APPEND ~interdia.2da~ ~IMOEN       BIMOEN2~ // fixes SoA version
-    UNLESS ~BIMOEN2~
-END
-
-// new state needed to fix Dead() triggers that don't use DVs
-APPEND ~state.ids~ ~0x00000FC0 STATE_REALLY_DEAD~ UNLESS ~0x00000FC0 STATE_REALLY_DEAD~
-
-// Shoutids.ids + gtimes.ids
-INCLUDE ~ninde_eet/macros/ids_entries_shoutids.tph~
-INCLUDE ~ninde_eet/macros/ids_entries_gtimes.tph~
+BEGIN ~Ninde NPC Mod~ 
+REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ @0
 
 // Compiling dialogue...
 COMPILE ~ninde_eet/dialogue/lk#nind.d~
-COMPILE ~ninde_eet/dialogue/lk#nindj.d~
+COMPILE EVALUATE_BUFFER ~ninde_eet/dialogue/lk#nindj.d~
 COMPILE ~ninde_eet/dialogue/blk#nind.d~
 COMPILE ~ninde_eet/dialogue/lk#nindp.d~
 COMPILE ~ninde_eet/dialogue/quest.d~
 
-COMPILE ~ninde_eet/dialogue/lk#ni25j.d~
+COMPILE EVALUATE_BUFFER ~ninde_eet/dialogue/lk#ni25j.d~
 COMPILE ~ninde_eet/dialogue/blk#ni25.d~
-COMPILE ~ninde_eet/dialogue/lk#ni25p.d~
+COMPILE EVALUATE_BUFFER ~ninde_eet/dialogue/lk#ni25p.d~
 
 // Compiling scripts...
-COMPILE ~ninde_eet/scripts/lk#nins.baf~
+COMPILE EVALUATE_BUFFER ~ninde_eet/scripts/lk#nins.baf~
 COMPILE ~ninde_eet/scripts/lk#nind.baf~
 COMPILE ~ninde_eet/scripts/lk#nicut.baf~
 COMPILE ~ninde_eet/scripts/lk#nict1.baf~
