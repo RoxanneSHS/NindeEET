@@ -11,10 +11,10 @@ width=166 height=260 id="Picture 1" src="ninde.jpg"
 ></span></p>
 
 <p class=MsoNormal style='line-height:normal'><b><span lang=EN-US
-style='font-size:12.0pt;font-family:"Times New Roman",serif'>Tactical quest mod for EET</span></b></p>
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>NPC mod for BG2EE and EET</span></b></p>
 
 <p class=MsoNormal style='line-height:normal'><span lang=EN-US
-style='font-size:12.0pt;font-family:"Times New Roman",serif'>Original mod by  <br>
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>Original mod by Deva  <br>
 Lady Ninde Amblecrown; once Waterdeep's most alluring young ingenue, now a hunted woman with a tongue like a guillotine, formidable magical skill and a matching ego. Will you befriend her? Grow to love her? Will you even be able to bring yourself to tolerate her?
 
 Her lavish upbringing have perhaps left Ninde with a slightly bloated sense of entitlement that doesn't exactly suit her to adventure, and certain events of her past darkened her temperament. That's not to say Ninde doesn't appreciate life's more earthy pleasures - men, mead and magic are her self-confessed vices, and 'being poor, seal-clubbing, and chastity' the only things she isn't good at. Although perhaps she exaggerates slightly, there.
