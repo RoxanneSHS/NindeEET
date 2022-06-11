@@ -5096,7 +5096,7 @@ END
 CHAIN IF ~Global("LK#NindeUnderdarkTalk","GLOBAL",2) Global("LK#NindeFriendshipActive","GLOBAL",1)~ THEN LK#NINDJ LK#UNDK
 @1415 /* You know, it really is quite beautiful down here. */
 = @1416 /* Oh, don't look at me like that, <CHARNAME>.  I'm not suggesting we start up a small guesthouse down here and market it for the picturesque vistas, but...glowing slimes.  Marvellous stone work.  Beautiful. */
-DO ~RealSetGlobalTimer("LK#NindeFriendTalksTimer","GLOBAL",2700) IncrementGlobal("LK#NindeUnderdarkTalk","GLOBAL",1)~
+DO ~SetGlobal("LK#NindeUnderdarkTalk","GLOBAL",3)RealSetGlobalTimer("LK#NindeFriendTalksTimer","GLOBAL",2700)~
 END
   ++ @1417 /* It's...different, I'm certain of that. */ + LK#UNDK_diffoo
   ++ @1418 /* You have very strange ideas about what's beautiful, Ninde.  Then again, should I be surprised?  You have very strange ideas about everything. */ + LK#UNDK_everything
@@ -5108,8 +5108,7 @@ CHAIN IF ~Global("LK#NindeUnderdarkTalk","GLOBAL",2) OR(2) Global("LK#NindeRoman
 Global("LK#NindeRomanceActive","GLOBAL",2)~ THEN LK#NINDJ LK#NL13
 @1415 /* You know, it really is quite beautiful down here. */
 = @1416 /* Oh, don't look at me like that, <CHARNAME>.  I'm not suggesting we start up a small guesthouse down here and market it for the picturesque vistas, but...glowing slimes.  Marvellous stone work.  Beautiful. */
-DO ~RealSetGlobalTimer("LK#NindeLoveTalksTimer","GLOBAL",1800) 
-IncrementGlobal("LK#NindeUnderdarkTalk","GLOBAL",1)~
+DO ~SetGlobal("LK#NindeUnderdarkTalk","GLOBAL",3) RealSetGlobalTimer("LK#NindeLoveTalksTimer","GLOBAL",1800)~
 END
   ++ @1417 /* It's...different, I'm certain of that. */ + LK#UNDK_diffoo
   ++ @1418 /* You have very strange ideas about what's beautiful, Ninde.  Then again, should I be surprised?  You have very strange ideas about everything. */ + LK#UNDK_everything
